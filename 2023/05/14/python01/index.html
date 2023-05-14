@@ -480,7 +480,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    224
+                    371
                 </div>
                 
 
@@ -556,6 +556,27 @@
 money <span class="token operator">=</span> money <span class="token operator">-</span> <span class="token number">10</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"买了冰淇淋花费10元，还剩余："</span><span class="token punctuation">,</span> money<span class="token punctuation">,</span><span class="token string">"元"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h2 id="字符串、数字转换"><a href="#字符串、数字转换" class="headerlink" title="字符串、数字转换"></a>字符串、数字转换</h2><table>
+<thead>
+<tr>
+<th>语句（函数）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>int(x)</td>
+<td>将x转化为一个整数</td>
+</tr>
+<tr>
+<td>float(x)</td>
+<td>将x转换为一个浮点数</td>
+</tr>
+<tr>
+<td>str(x)</td>
+<td>将对象x转换为字符串</td>
+</tr>
+</tbody></table>
+<p>说明：万物皆可转字符串，因为万物带上双引号就是字符串，但是想将字符串转为数字，需要确保字符串的内容都是数字才可以。特别：整数也会转为浮点数，如 a &#x3D; float（11），结果a&#x3D;11.0; 浮点数也会转为整数，如b &#x3D; int(3.1415), 结果b&#x3D;3, 会丢失精度。</p>
 
                 
             </div>
