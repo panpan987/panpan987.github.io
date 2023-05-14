@@ -480,14 +480,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    874
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
 
@@ -662,9 +662,59 @@ effect <span class="token operator">=</span> <span class="token string">"可以�
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"我是"</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">","</span> <span class="token operator">+</span> effect<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>运行结果：</p>
 <pre class="line-numbers language-dos" data-language="dos"><code class="language-dos">我是Java,可以做网站后端<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
+<p>如果变量是数字呢</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name <span class="token operator">=</span> <span class="token string">"小王"</span>
+address <span class="token operator">=</span> <span class="token string">"人民东路108号"</span>
+tel <span class="token operator">=</span> <span class="token number">4006188080</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"我是"</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">",我的地址是："</span> <span class="token operator">+</span> address <span class="token operator">+</span> <span class="token string">",我的电话是："</span> <span class="token operator">+</span> tel<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>运行结果：</p>
+<pre class="line-numbers language-dos" data-language="dos"><code class="language-dos">print(&quot;我是&quot; + name + &quot;,我的地址是：&quot; + address + &quot;,我的电话是：&quot; + tel)
+TypeError: can only concatenate str (not &quot;int&quot;) to str<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>字符串没有办法和数字完成拼接的，需要转化</p>
+<h2 id="字符串格式化"><a href="#字符串格式化" class="headerlink" title="字符串格式化"></a>字符串格式化</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">anyu <span class="token operator">=</span> <span class="token string">"宝塔镇河妖"</span>
+message <span class="token operator">=</span> <span class="token string">"天王盖地虎, %s"</span> <span class="token operator">%</span> anyu
+<span class="token keyword">print</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>运行结果：</p>
+<pre class="line-numbers language-dos" data-language="dos"><code class="language-dos">天王盖地虎, 宝塔镇河妖<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>其中，%s</p>
+<ul>
+<li>% 表示：我要占位</li>
+<li>s 表示：将变量变成字符串放入占位的地方</li>
+</ul>
+<p>那，数字类型呢？可以用占位？<br>那必须可以的</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">nf <span class="token operator">=</span> <span class="token number">2023</span>
+zy <span class="token operator">=</span> <span class="token string">"计算机专业"</span>
+avg_salary <span class="token operator">=</span> <span class="token number">17000</span>
+message <span class="token operator">=</span> <span class="token string">"根据大数据显示，%s年%s毕业的学生平均月薪为%s"</span> <span class="token operator">%</span> <span class="token punctuation">(</span>nf<span class="token punctuation">,</span> zy<span class="token punctuation">,</span> avg_salary<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-dos" data-language="dos"><code class="language-dos">根据大数据显示，2023年计算机专业毕业的学生平均月薪为17000<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>在Python中，其实支持很多的数据类型占位<br>最常用的是如下三类</p>
+<table>
+<thead>
+<tr>
+<th>格式符号</th>
+<th>转化</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>%s</td>
+<td>将内容转化成字符串，放入占位位置</td>
+</tr>
+<tr>
+<td>%d</td>
+<td>将内容转换成整数，放入占位位置</td>
+</tr>
+<tr>
+<td>%f</td>
+<td>将内容转换成浮点型，放入占位位置</td>
+</tr>
+</tbody></table>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name <span class="token operator">=</span> <span class="token string">"panda电竞鼠标"</span>
+year <span class="token operator">=</span> <span class="token number">2023</span>
+price <span class="token operator">=</span> <span class="token number">19.99</span>
+message <span class="token operator">=</span> <span class="token string">"根据大数据显示,%d年这一款名为%s的产品售价仅仅需要%f元"</span> <span class="token operator">%</span> <span class="token punctuation">(</span>year<span class="token punctuation">,</span> name<span class="token punctuation">,</span> price<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-dos" data-language="dos"><code class="language-dos">根据大数据显示,2023年这一款名为panda电竞鼠标的产品售价仅仅需要19.990000元<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
                 
             </div>
