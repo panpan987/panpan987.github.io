@@ -4,13 +4,27 @@
   
     
     <entry>
-      <title></title>
+      <title>typora-vue-theme Theme introduction</title>
       <link href="/2023/05/14/python01/"/>
       <url>/2023/05/14/python01/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="Python中常用6种数据类型"><a href="#Python中常用6种数据类型" class="headerlink" title="Python中常用6种数据类型"></a>Python中常用6种数据类型</h2><table><thead><tr><th>类型</th><th>描述</th><th>说明</th></tr></thead><tbody><tr><td>数字（Number）</td><td><code>支持：</code> <br> 整数（int）<br> 浮点数（float）<br> 复数（complex）<br> 布尔（bool）</td><td><br> 整数(int), 如：10、-3 <br> 浮点数(float), 如13.14，-3.15 <br> 复数，如4+3j <br> 布尔，True为真，False为假</td></tr><tr><td>字符串(String)</td><td>描述文本的一种数据类型</td><td>字符串(String)由任意数量的字符组成</td></tr><tr><td>列表（list）</td><td>有序的可变序列</td><td>Python里面使用最频繁的数据类型，可有序记录一堆数据</td></tr><tr><td>元组（Tuple）</td><td>有序不可变序列</td><td></td></tr><tr><td>集合（set）</td><td>无序不重复集合</td><td></td></tr><tr><td>字典（Dictionary）</td><td>无序key-value集合</td><td></td></tr></tbody></table><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>变量：在程序运行时，能存储计算结果或能表示值的抽象概念。简单来说，变量就是在程序运行时，记录数据用的。</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">money <span class="token operator">=</span> <span class="token number">20</span><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"钱包还有："</span><span class="token punctuation">,</span>money<span class="token punctuation">)</span>money <span class="token operator">=</span> money <span class="token operator">-</span> <span class="token number">10</span><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"买了冰淇淋花费10元，还剩余："</span><span class="token punctuation">,</span> money<span class="token punctuation">,</span><span class="token string">"元"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
       
       
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> 基础 </tag>
+            
+        </tags>
       
     </entry>
     
