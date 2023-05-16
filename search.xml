@@ -4,6 +4,114 @@
   
     
     <entry>
+      <title>Python05</title>
+      <link href="/2023/05/16/python05/"/>
+      <url>/2023/05/16/python05/</url>
+      
+        <content type="html"><![CDATA[<h2 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token builtin">sum</span> <span class="token operator">=</span> <span class="token number">0</span>i <span class="token operator">=</span> <span class="token number">1</span><span class="token keyword">while</span> i <span class="token operator">&lt;=</span> <span class="token number">100</span><span class="token punctuation">:</span>    <span class="token builtin">sum</span> <span class="token operator">+=</span> i    i <span class="token operator">+=</span> <span class="token number">1</span><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"1-100累加的和是：</span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token builtin">sum</span><span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>运行结果：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token number">1</span>-100累加的和是：5050<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> randomnum <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span>count <span class="token operator">=</span> <span class="token number">0</span>flag <span class="token operator">=</span> <span class="token boolean">True</span><span class="token keyword">while</span> flag<span class="token punctuation">:</span>    guess_num <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">"请输入你猜测的数字："</span><span class="token punctuation">)</span><span class="token punctuation">)</span>    count <span class="token operator">+=</span> <span class="token number">1</span>    <span class="token keyword">if</span> guess_num <span class="token operator">==</span> num<span class="token punctuation">:</span>        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"猜中了"</span><span class="token punctuation">)</span>        flag <span class="token operator">=</span> <span class="token boolean">False</span>    <span class="token keyword">else</span><span class="token punctuation">:</span>        <span class="token keyword">if</span> guess_num <span class="token operator">></span>  <span class="token punctuation">:</span>            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"你猜的大了"</span><span class="token punctuation">)</span>        <span class="token keyword">else</span><span class="token punctuation">:</span>            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"你猜的小了"</span><span class="token punctuation">)</span><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"你总共猜测了</span><span class="token interpolation"><span class="token punctuation">&#123;</span>count<span class="token punctuation">&#125;</span></span><span class="token string">次"</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>运行结果(结果不唯一)：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">请输入你猜测的数字：50你猜的小了请输入你猜测的数字：70你猜的大了请输入你猜测的数字：65你猜的小了请输入你猜测的数字：62你猜的小了请输入你猜测的数字：50你猜的小了请输入你猜测的数字：70你猜的大了请输入你猜测的数字：69猜中了你总共猜测了7次<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> 基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python04</title>
+      <link href="/2023/05/16/python04/"/>
+      <url>/2023/05/16/python04/</url>
+      
+        <content type="html"><![CDATA[<h2 id="if语句的基本格式"><a href="#if语句的基本格式" class="headerlink" title="if语句的基本格式"></a>if语句的基本格式</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python">age <span class="token operator">=</span> <span class="token number">30</span><span class="token keyword">if</span> age <span class="token operator">>=</span> <span class="token number">18</span><span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"我已经成年了"</span><span class="token punctuation">)</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"即将步入大学生活"</span><span class="token punctuation">)</span><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"时间过得真快"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>运行结果：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">我已经成年了即将步入大学生活时间过得真快<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>说明：判断语句的结果，必须是布尔类型True或False，<br>True会执行if内的代码语句，False则不会执行</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">age <span class="token operator">=</span> <span class="token number">17</span><span class="token keyword">if</span> age <span class="token operator">>=</span> <span class="token number">18</span><span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"我已经成年了"</span><span class="token punctuation">)</span><span class="token keyword">else</span><span class="token punctuation">:</span>    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"你还没成年"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>运行结果：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">你还没成年<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="猜数字小游戏"><a href="#猜数字小游戏" class="headerlink" title="猜数字小游戏"></a>猜数字小游戏</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> 基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python03</title>
+      <link href="/2023/05/15/python03/"/>
+      <url>/2023/05/15/python03/</url>
+      
+        <content type="html"><![CDATA[<h2 id="逻辑判断功能"><a href="#逻辑判断功能" class="headerlink" title="逻辑判断功能"></a>逻辑判断功能</h2><p><img src="/../../themes/hexo-theme-matery-master/source/image/00.png" alt="判断功能"><br>判断是程序最基础、最核心的逻辑功能。</p><h2 id="布尔类型和比较运算符"><a href="#布尔类型和比较运算符" class="headerlink" title="布尔类型和比较运算符"></a>布尔类型和比较运算符</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> 基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python02</title>
+      <link href="/2023/05/14/python02/"/>
+      <url>/2023/05/14/python02/</url>
+      
+        <content type="html"><![CDATA[<h2 id="字符格式化-数字精度控制"><a href="#字符格式化-数字精度控制" class="headerlink" title="字符格式化 - 数字精度控制"></a>字符格式化 - 数字精度控制</h2><p>我们可以使用辅助符号 m.n 来控制数据的宽度和精度</p><ul><li>m, 控制宽度，要求是数字，设置的宽度小于数字自身，不生效</li><li>n, 控制小数点精度，要求是数字，会进行四舍五入<br>示例</li><li>%5d: 表示将整数的宽度控制在5位，如数字11，被设置为5d，就会变成：【空格】【空格】【空格】11，用三个空格补足宽度</li><li>%5.2f: 表示宽度为5，小数点精度为2<br>小数点和小数部分也算入宽度计算，如11.345设置了%7.2f后，结果是【空格】【空格】11.35。2个空格补足宽度，小数部分限制2位精度后，四舍五入为.35</li><li>%.2f: 表示不限制宽度，只设置小数点精度为2，如11.345设置%.2f后，结果是11.35</li></ul><h2 id="字符串的格式化2"><a href="#字符串的格式化2" class="headerlink" title="字符串的格式化2"></a>字符串的格式化2</h2><p>之前使用 % 占位，还可以使用f”内容{变量}”进行快速格式化</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">name <span class="token operator">=</span> <span class="token string">"苹果17"</span>year <span class="token operator">=</span> <span class="token number">2023</span>month <span class="token operator">=</span> <span class="token number">6</span>price <span class="token operator">=</span> <span class="token number">6999.99</span><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"一个叫做</span><span class="token interpolation"><span class="token punctuation">&#123;</span>name<span class="token punctuation">&#125;</span></span><span class="token string">的手机,</span><span class="token interpolation"><span class="token punctuation">&#123;</span>year<span class="token punctuation">&#125;</span></span><span class="token string">年</span><span class="token interpolation"><span class="token punctuation">&#123;</span>month<span class="token punctuation">&#125;</span></span><span class="token string">月上市，价格为：</span><span class="token interpolation"><span class="token punctuation">&#123;</span>price<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>运行结果：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">一个叫做苹果17的手机,2023年6月上市，价格为：6999.99<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>股票练习题</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">name <span class="token operator">=</span> <span class="token string">"无忧旅馆"</span>stock_price <span class="token operator">=</span> <span class="token number">19.99</span>stock_code <span class="token operator">=</span> <span class="token string">"003032"</span>stock_price_daily_growth_factor <span class="token operator">=</span> <span class="token number">1.2</span>growth_days <span class="token operator">=</span> <span class="token number">7</span>finally_stock_price <span class="token operator">=</span> stock_price <span class="token operator">*</span> stock_price_daily_growth_factor <span class="token operator">**</span> growth_days<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"公司：</span><span class="token interpolation"><span class="token punctuation">&#123;</span>name<span class="token punctuation">&#125;</span></span><span class="token string">,股票代码：</span><span class="token interpolation"><span class="token punctuation">&#123;</span>stock_code<span class="token punctuation">&#125;</span></span><span class="token string">,当前股价：</span><span class="token interpolation"><span class="token punctuation">&#123;</span>stock_price<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"每日增长系数：%.1f,经过%d天的增长后，股价达到了：%.2f"</span> <span class="token operator">%</span> <span class="token punctuation">(</span>stock_price_daily_growth_factor<span class="token punctuation">,</span>growth_days<span class="token punctuation">,</span>finally_stock_price<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>运行结果：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">公司：无忧旅馆,股票代码：003032,当前股价：19.99每日增长系数：1.2,经过7天的增长后，股价达到了：71.63<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h2 id="input语句"><a href="#input语句" class="headerlink" title="input语句"></a>input语句</h2><p>获取键盘输入</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"请告诉我你是谁?"</span><span class="token punctuation">)</span>name <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"我知道了，你是：%s"</span> <span class="token operator">%</span> name<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>运行结果：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">请告诉我你是谁?安度因我知道了，你是：安度因<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> 基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python01</title>
       <link href="/2023/05/14/python01/"/>
       <url>/2023/05/14/python01/</url>
@@ -31,19 +139,6 @@
     
     
     <entry>
-      <title>Hello World</title>
-      <link href="/2023/05/13/hello-world/"/>
-      <url>/2023/05/13/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>test-page</title>
       <link href="/2018/09/07/test/"/>
       <url>/2018/09/07/test/</url>
@@ -63,6 +158,25 @@
             <tag> Typora </tag>
             
             <tag> Markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2012/06/06/hello-world/"/>
+      <url>/2012/06/06/hello-world/</url>
+      
+        <content type="html"><![CDATA[<hr><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Hello World </tag>
             
         </tags>
       
