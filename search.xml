@@ -170,7 +170,7 @@
       <link href="/2023/05/15/python03/"/>
       <url>/2023/05/15/python03/</url>
       
-        <content type="html"><![CDATA[<h2 id="逻辑判断功能"><a href="#逻辑判断功能" class="headerlink" title="逻辑判断功能"></a>逻辑判断功能</h2><p><img src="https://cdn.jsdelivr.net/gh/panpan987/CDN@master/img/pd.png" alt="判断功能"><br>判断是程序最基础、最核心的逻辑功能。</p><h2 id="布尔类型和比较运算符"><a href="#布尔类型和比较运算符" class="headerlink" title="布尔类型和比较运算符"></a>布尔类型和比较运算符</h2>]]></content>
+        <content type="html"><![CDATA[<h2 id="逻辑判断功能"><a href="#逻辑判断功能" class="headerlink" title="逻辑判断功能"></a>逻辑判断功能</h2><p><img src="https://cdn.jsdelivr.net/gh/panpan987/CDN@master/img/pd.png" alt="判断功能"><br>判断是程序最基础、最核心的逻辑功能。  </p><p>一般格式</p><ol><li><code>if 条件表达式:</code></li><li><code>if 条件表达式: else: </code></li><li><code>if 条件表达式: elif 条件表达式: ... elif 条件表达式: else:</code></li></ol><h2 id="布尔类型和比较运算符"><a href="#布尔类型和比较运算符" class="headerlink" title="布尔类型和比较运算符"></a>布尔类型和比较运算符</h2>]]></content>
       
       
       <categories>
