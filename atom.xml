@@ -1,20 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>菜鸟学编程0.&lt;</title>
   
   
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-05-20T15:42:35.031Z</updated>
+  <updated>2023-05-28T05:59:07.380Z</updated>
   <id>http://example.com/</id>
   
   <author>
-    <name>Anduin</name>
+    <name>niconico</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python06</title>
+    <link href="http://example.com/2023/05/28/python06/"/>
+    <id>http://example.com/2023/05/28/python06/</id>
+    <published>2023-05-28T03:57:00.000Z</published>
+    <updated>2023-05-28T05:59:07.380Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;for循环&quot;&gt;&lt;a href=&quot;#for循环&quot; class=&quot;headerlink&quot; title=&quot;for循环&quot;&gt;&lt;/a&gt;for循环&lt;/h2&gt;&lt;pre class=&quot;line-numbers language-python&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="http://example.com/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="基础" scheme="http://example.com/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>css02</title>
+    <link href="http://example.com/2023/05/21/css02/"/>
+    <id>http://example.com/2023/05/21/css02/</id>
+    <published>2023-05-21T10:05:00.000Z</published>
+    <updated>2023-05-21T10:32:29.499Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;btn效果&quot;&gt;&lt;a href=&quot;#btn效果&quot; class=&quot;headerlink&quot; title=&quot;btn效果&quot;&gt;&lt;/a&gt;btn效果&lt;/h2&gt;&lt;pre class=&quot;line-numbers language-markup&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="css" scheme="http://example.com/categories/css/"/>
+    
+    
+    <category term="css" scheme="http://example.com/tags/css/"/>
+    
+    <category term="Udemy排名第一的高级CSS课程" scheme="http://example.com/tags/Udemy%E6%8E%92%E5%90%8D%E7%AC%AC%E4%B8%80%E7%9A%84%E9%AB%98%E7%BA%A7CSS%E8%AF%BE%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>css01</title>
@@ -76,14 +130,14 @@
     <link href="http://example.com/2023/05/16/python05/"/>
     <id>http://example.com/2023/05/16/python05/</id>
     <published>2023-05-16T12:25:00.000Z</published>
-    <updated>2023-05-20T15:43:12.990Z</updated>
+    <updated>2023-05-28T05:59:08.914Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;循环&quot;&gt;&lt;a href=&quot;#循环&quot; class=&quot;headerlink&quot; title=&quot;循环&quot;&gt;&lt;/a&gt;循环&lt;/h2&gt;&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code</summary>
+    <summary type="html">&lt;h2 id=&quot;while循环&quot;&gt;&lt;a href=&quot;#while循环&quot; class=&quot;headerlink&quot; title=&quot;while循环&quot;&gt;&lt;/a&gt;while循环&lt;/h2&gt;&lt;pre class=&quot;line-numbers language-python&quot;</summary>
         
       
     
