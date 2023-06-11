@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-05-28T11:43:04.071Z</updated>
+  <updated>2023-06-11T14:37:34.202Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python08</title>
+    <link href="http://example.com/2023/06/09/python08/"/>
+    <id>http://example.com/2023/06/09/python08/</id>
+    <published>2023-06-09T12:00:00.000Z</published>
+    <updated>2023-06-11T14:37:34.202Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;数据容器&quot;&gt;&lt;a href=&quot;#数据容器&quot; class=&quot;headerlink&quot; title=&quot;数据容器&quot;&gt;&lt;/a&gt;数据容器&lt;/h2&gt;&lt;p&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="http://example.com/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="基础" scheme="http://example.com/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python07</title>
+    <link href="http://example.com/2023/06/02/python07/"/>
+    <id>http://example.com/2023/06/02/python07/</id>
+    <published>2023-06-02T10:35:00.000Z</published>
+    <updated>2023-06-02T11:33:07.149Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;函数&quot;&gt;&lt;a href=&quot;#函数&quot; class=&quot;headerlink&quot; title=&quot;函数&quot;&gt;&lt;/a&gt;函数&lt;/h2&gt;&lt;p&gt; 函数：是组织好的，可重复使用的，用来实现特定功能的代码段。&lt;br&gt; &lt;pre class=&quot;line-numbers</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="http://example.com/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="基础" scheme="http://example.com/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
   
   <entry>
     <title>Python06</title>

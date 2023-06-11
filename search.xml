@@ -4,6 +4,60 @@
   
     
     <entry>
+      <title>Python08</title>
+      <link href="/2023/06/09/python08/"/>
+      <url>/2023/06/09/python08/</url>
+      
+        <content type="html"><![CDATA[<h2 id="数据容器"><a href="#数据容器" class="headerlink" title="数据容器"></a>数据容器</h2><p> 一种可以容纳多份数据的数据类型，容纳的每一份数据称之为1个元素。每一个元素，可以是任意类型的数据，如字符串、数据、布尔等。<br> 数据容器根据特点的不同，如：</p><ul><li>是否支持重复元素</li><li>是否可以修改</li><li>是否有序，等<br> 分为5类，分别是：<br> 列表（list）、元组（tuple）、字符串（str）、集合（set）、字典（dict）<br>一层列表<pre class="line-numbers language-python" data-language="python"><code class="language-python">list1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'python'</span><span class="token punctuation">,</span> <span class="token string">'Java'</span><span class="token punctuation">,</span> <span class="token string">'html'</span><span class="token punctuation">,</span> <span class="token number">666</span><span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">]</span><span class="token keyword">print</span><span class="token punctuation">(</span>list1<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span><span class="token string">'python'</span>, <span class="token string">'Java'</span>, <span class="token string">'html'</span>, <span class="token number">666</span>, True<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>嵌套列表<pre class="line-numbers language-python" data-language="python"><code class="language-python">list2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token keyword">print</span><span class="token punctuation">(</span>list2<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span>, <span class="token number">2</span>, <span class="token number">3</span><span class="token punctuation">]</span>, <span class="token punctuation">[</span><span class="token number">4</span>, <span class="token number">5</span>, <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li></ul><p>如何从列表中取出特定位置的数据呢？<br>我们可以使用：下标索引<br><img src="https://cdn.jsdelivr.net/gh/panpan987/CDN@master/img/Snipaste_2023-06-09_20-30-12.png"><br>如图：列表中的每一个元素，都有其位置下标索引，从前向后的方向，从0开始，依次递增，我们只需要按照下标索引，即可取得对应位置的元素。</p><pre class="line-numbers language-python" data-language="python"><code class="language-python">list3 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Python'</span><span class="token punctuation">,</span><span class="token string">'Java'</span><span class="token punctuation">,</span><span class="token string">'C++'</span><span class="token punctuation">]</span><span class="token keyword">print</span><span class="token punctuation">(</span>list3<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token keyword">print</span><span class="token punctuation">(</span>list3<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token keyword">print</span><span class="token punctuation">(</span>list3<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">PythonJavaC++<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>列表的下标（索引）- 反向</p><p><img src="https://cdn.jsdelivr.net/gh/panpan987/CDN@master/img/Snipaste_2023-06-11_17-47-26.png"><br>嵌套列表的下标（索引）<br><img src="https://cdn.jsdelivr.net/gh/panpan987/CDN@master/img/Snipaste_2023-06-11_17-49-28.png"></p><pre class="line-numbers language-python" data-language="python"><code class="language-python">list4 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token keyword">print</span><span class="token punctuation">(</span>list4<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token number">5</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="列表的常用操作（方法）"><a href="#列表的常用操作（方法）" class="headerlink" title="列表的常用操作（方法）"></a>列表的常用操作（方法）</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> 基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Python07</title>
+      <link href="/2023/06/02/python07/"/>
+      <url>/2023/06/02/python07/</url>
+      
+        <content type="html"><![CDATA[<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p> 函数：是组织好的，可重复使用的，用来实现特定功能的代码段。<br> <pre class="line-numbers language-python" data-language="python"><code class="language-python">name <span class="token operator">=</span> <span class="token string">"xiaobaixuePython"</span>length <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token keyword">print</span><span class="token punctuation">(</span>length<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></p><pre class="line-numbers language-none"><code class="language-none">16 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>为什么随时都可以使用len()统计长度？<br>因为：len（）是Python内置的函数：</p><ul><li>是提前写好的</li><li>可以重复使用</li><li>实现统计长度这一特定功能的代码段</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> 基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python06</title>
       <link href="/2023/05/28/python06/"/>
       <url>/2023/05/28/python06/</url>
