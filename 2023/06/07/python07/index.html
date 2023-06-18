@@ -277,7 +277,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/panpan987/CDN@master/cover_img/235952-168494399295d6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://cdn.jsdelivr.net/gh/panpan987/CDN@master/cover_img/001818-16826122981a31.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -427,7 +427,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-06-02
+                    2023-06-07
                 </div>
                 
 
@@ -436,14 +436,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    88
+                    943
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -466,16 +466,158 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p> 函数：是组织好的，可重复使用的，用来实现特定功能的代码段。<br> <pre class="line-numbers language-python" data-language="python"><code class="language-python">name <span class="token operator">=</span> <span class="token string">"xiaobaixuePython"</span>
+                <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>函数是组织好的，可重复使用，用来实现特定功能的代码段。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">name <span class="token operator">=</span> <span class="token string">"Hello"</span>
 length <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>length<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></p>
-<pre class="line-numbers language-none"><code class="language-none">16 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>为什么随时都可以使用len()统计长度？<br>因为：len（）是Python内置的函数：</p>
+<span class="token keyword">print</span><span class="token punctuation">(</span>length<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token number">5</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>为什么随时都可以使用len()统计长度？<br>因为，len()是Python内置的函数：</p>
 <ul>
 <li>是提前写好的</li>
 <li>可以重复使用</li>
 <li>实现统计长度这一特定功能的代码段</li>
 </ul>
+<p>我们使用过的input()、print()、int()等都是Python的内置函数。</p>
+<p>需求：不使用系统内置函数，统计字符串长度。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">str1 <span class="token operator">=</span> <span class="token string">"Python"</span>
+str2 <span class="token operator">=</span> <span class="token string">"Number one"</span>
+
+count <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> str1<span class="token punctuation">:</span>
+    count <span class="token operator">+=</span> <span class="token number">1</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"字符串</span><span class="token interpolation"><span class="token punctuation">&#123;</span>str1<span class="token punctuation">&#125;</span></span><span class="token string">的长度是：</span><span class="token interpolation"><span class="token punctuation">&#123;</span>count<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+
+count <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> str2<span class="token punctuation">:</span>
+    count <span class="token operator">+=</span> <span class="token number">1</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"字符串</span><span class="token interpolation"><span class="token punctuation">&#123;</span>str2<span class="token punctuation">&#125;</span></span><span class="token string">的长度是：</span><span class="token interpolation"><span class="token punctuation">&#123;</span>count<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">字符串Python的长度是：6
+字符串Number one的长度是：10<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>但是这样的代码重复严重，所以可以使用函数优化代码，如：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">str1 <span class="token operator">=</span> <span class="token string">"Python"</span>
+str2 <span class="token operator">=</span> <span class="token string">"Number one"</span>
+
+<span class="token keyword">def</span> <span class="token function">my_len</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    count <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> data<span class="token punctuation">:</span>
+        count <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"字符串</span><span class="token interpolation"><span class="token punctuation">&#123;</span>data<span class="token punctuation">&#125;</span></span><span class="token string">的长度是</span><span class="token interpolation"><span class="token punctuation">&#123;</span>count<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+
+my_len<span class="token punctuation">(</span>str1<span class="token punctuation">)</span>
+my_len<span class="token punctuation">(</span>str2<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">字符串Python的长度是6
+字符串Number one的长度是10<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>为什么要学习、使用函数呢？<br>为了得到一个针对特定需求、可供重复利用的代码段，提高程序的复用性，减少重复性代码，提高开发效率。</p>
+<p>函数的定义：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> 函数名<span class="token punctuation">(</span>传入参数<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    函数体
+    <span class="token keyword">return</span> 返回值<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>无参案例</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">say_hi</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"欢迎光临\n这边请！"</span><span class="token punctuation">)</span>
+
+say_hi<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">欢迎光临
+这边请<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>有参案例</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">add</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    result <span class="token operator">=</span> x <span class="token operator">+</span> y
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"</span><span class="token interpolation"><span class="token punctuation">&#123;</span>x<span class="token punctuation">&#125;</span></span><span class="token string"> + </span><span class="token interpolation"><span class="token punctuation">&#123;</span>y<span class="token punctuation">&#125;</span></span><span class="token string">的计算结果是：</span><span class="token interpolation"><span class="token punctuation">&#123;</span>result<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+
+add<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token number">5</span> + <span class="token number">6</span>的计算结果是：11<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>在函数定义中，提供的x和y,称之为：形式参数（形参），表示函数声明将要使用2个参数。函数调用中，提供的5和6，称之为：实际参数（实参），表示函数执行时真正使用的参数值，传入时，按照顺序传入数据，使用逗号分隔。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">check</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"请配合测量体温！"</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> num <span class="token operator">&lt;=</span> <span class="token number">37.5</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"体温测量中，您的体温是：</span><span class="token interpolation"><span class="token punctuation">&#123;</span>num<span class="token punctuation">&#125;</span></span><span class="token string">度，体温正常请进！"</span></span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"体温测量中，您的体温是：</span><span class="token interpolation"><span class="token punctuation">&#123;</span>num<span class="token punctuation">&#125;</span></span><span class="token string">度，需要隔离！"</span></span><span class="token punctuation">)</span>
+        
+check<span class="token punctuation">(</span><span class="token number">37.3</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">请配合测量体温！
+体温测量中，您的体温是：37.3度，体温正常请进！<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>函数的返回值</p>
+<pre class="line-numbers language-none"><code class="language-none">def 函数(参数...):
+    函数体
+    return 返回值
+
+变量 &#x3D; 函数(参数...)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    result <span class="token operator">=</span> a <span class="token operator">+</span> b
+    <span class="token keyword">return</span> result
+
+r <span class="token operator">=</span> add<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>r<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token number">3</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>什么是函数的嵌套调用<br>所谓函数的嵌套调用是指在一个函数里面又调用了另外一个函数。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">func_b</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"---2---"</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">func_a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"---1---"</span><span class="token punctuation">)</span>
+
+    func_b<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"---3---"</span><span class="token punctuation">)</span>
+
+func_a<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">---1---
+---2---
+---3---<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>执行流程：函数A中执行到调用函数B的语句，会将函数B全部执行完成后，继续执行函数A的剩余内容</p>
+<p>变量作用域指的是变量的作用范围（变量在哪里可用，在哪里不可用）<br>主要分为两类：局部变量和全局变量</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">testA</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    num <span class="token operator">=</span> <span class="token number">100</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span>
+
+testA<span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token comment"># 100</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span>  <span class="token comment"># 报错：name 'num' is not defined.</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>局部变量的作用：在函数体内部，临时保存数据，即当函数调用完成后，则销毁局部变量。</p>
+<p>所谓全局变量，指的是在函数体内、外都能生效的变量。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">num <span class="token operator">=</span> <span class="token number">100</span>
+
+<span class="token keyword">def</span> <span class="token function">testA</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">testB</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span>
+
+testA<span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token comment"># 100</span>
+testB<span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token comment"># 100</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>在函数体内可以修改全局变量吗？</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">num <span class="token operator">=</span> <span class="token number">200</span>
+
+<span class="token keyword">def</span> <span class="token function">test_a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">test_b</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    num <span class="token operator">=</span> <span class="token number">500</span> <span class="token comment"># 变成了局部变量，和外部的没有任何联系</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span>
+
+test_a<span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token comment"># 100</span>
+test_b<span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token comment"># 100</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>可以使用global关键字</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">num <span class="token operator">=</span> <span class="token number">200</span>
+
+<span class="token keyword">def</span> <span class="token function">test_a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">test_b</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># global 关键字，在函数内声明变量为全局变量</span>
+    <span class="token keyword">global</span> num
+    num <span class="token operator">=</span> <span class="token number">500</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span>
+
+test_a<span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token comment"># 100</span>
+test_b<span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token comment"># 100</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token number">200</span>
+<span class="token number">500</span>
+<span class="token number">500</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -492,7 +634,7 @@ length <span class="token operator">=</span> <span class="token builtin">len</sp
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">小白学Python</a>
+                    <a href="/about" rel="external nofollow noreferrer">Anduin</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -502,7 +644,7 @@ length <span class="token operator">=</span> <span class="token builtin">len</sp
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2023/06/02/python07/">http://example.com/2023/06/02/python07/</a>
+                    <a href="http://example.com/2023/06/07/python07/">http://example.com/2023/06/07/python07/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -515,7 +657,7 @@ length <span class="token operator">=</span> <span class="token builtin">len</sp
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">小白学Python</a>
+                    <a href="/about" target="_blank">Anduin</a>
                     !
                 </span>
             </div>
@@ -566,132 +708,6 @@ length <span class="token operator">=</span> <span class="token builtin">len</sp
 
                 </div>
             </div>
-            
-                <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.4rem;
-        line-height: 38px;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
-        height: 350px;
-    }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
-    }
-
-    #rewardModal .modal-content {
-        padding: 10px;
-    }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
-    }
-
-    #rewardModal .close:hover {
-        color: #ef5350;
-        transform: scale(1.3);
-        -moz-transform:scale(1.3);
-        -webkit-transform:scale(1.3);
-        -o-transform:scale(1.3);
-    }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
-    }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
-    }
-
-    .reward-content ul {
-        padding-left: 0 !important;
-    }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
-    }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
-    }
-
-    .reward-tabs .tab a:hover {
-        background-color: #ccc;
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff !important;
-        background-color: #22AB38 !important;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff !important;
-        background-color: #019FE8 !important;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
-    }
-</style>
-
-<div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">请作者吃糖</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/ali.png" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wx.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
             
         </div>
     </div>
@@ -744,7 +760,7 @@ length <span class="token operator">=</span> <span class="token builtin">len</sp
                 <a href="/2023/06/09/python08/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/panpan987/CDN@master/cover_img/113951-16658915918d26.jpg" class="responsive-img" alt="Python08">
+                        <img src="https://cdn.jsdelivr.net/gh/panpan987/CDN@master/cover_img/123916-1635741556813b.jpg" class="responsive-img" alt="Python08">
                         
                         <span class="card-title">Python08</span>
                     </div>
@@ -793,12 +809,13 @@ length <span class="token operator">=</span> <span class="token builtin">len</sp
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/05/28/python06/">
+                <a href="/2023/06/06/gao-yi-shang/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/panpan987/CDN@master/cover_img/235952-168494399295d6.jpg" class="responsive-img" alt="Python06">
                         
-                        <span class="card-title">Python06</span>
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="计算机基础">
+                        
+                        <span class="card-title">计算机基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -809,14 +826,14 @@ length <span class="token operator">=</span> <span class="token builtin">len</sp
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-06
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Python/" class="post-category">
-                                    Python
+                            <a href="/categories/%E5%9F%BA%E7%A1%80/" class="post-category">
+                                    基础
                                 </a>
                             
                             
@@ -825,10 +842,6 @@ length <span class="token operator">=</span> <span class="token builtin">len</sp
                 </div>
                 
                 <div class="card-action article-tags">
-                    
-                    <a href="/tags/Python/">
-                        <span class="chip bg-color">Python</span>
-                    </a>
                     
                     <a href="/tags/%E5%9F%BA%E7%A1%80/">
                         <span class="chip bg-color">基础</span>
