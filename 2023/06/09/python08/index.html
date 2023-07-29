@@ -436,14 +436,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    286
+                    2.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    8 分
                 </div>
                 
 
@@ -470,13 +470,17 @@
 <ul>
 <li>是否支持重复元素</li>
 <li>是否可以修改</li>
-<li>是否有序，等<br> 分为5类，分别是：<br> 列表（list）、元组（tuple）、字符串（str）、集合（set）、字典（dict）<br>一层列表<pre class="line-numbers language-python" data-language="python"><code class="language-python">list1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'python'</span><span class="token punctuation">,</span> <span class="token string">'Java'</span><span class="token punctuation">,</span> <span class="token string">'html'</span><span class="token punctuation">,</span> <span class="token number">666</span><span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">]</span>
+<li>是否有序，等<br> 分为5类，分别是：<br> 列表（list）、元组（tuple）、字符串（str）、集合（set）、字典（dict）</li>
+</ul>
+<h3 id="一、列表（list）"><a href="#一、列表（list）" class="headerlink" title="一、列表（list）"></a>一、列表（list）</h3><p>一层列表</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">list1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'python'</span><span class="token punctuation">,</span> <span class="token string">'Java'</span><span class="token punctuation">,</span> <span class="token string">'html'</span><span class="token punctuation">,</span> <span class="token number">666</span><span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">]</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>list1<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span><span class="token string">'python'</span>, <span class="token string">'Java'</span>, <span class="token string">'html'</span>, <span class="token number">666</span>, True<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-嵌套列表<pre class="line-numbers language-python" data-language="python"><code class="language-python">list2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+<p>嵌套列表</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">list2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>list2<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span>, <span class="token number">2</span>, <span class="token number">3</span><span class="token punctuation">]</span>, <span class="token punctuation">[</span><span class="token number">4</span>, <span class="token number">5</span>, <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
-</ul>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1</span>, <span class="token number">2</span>, <span class="token number">3</span><span class="token punctuation">]</span>, <span class="token punctuation">[</span><span class="token number">4</span>, <span class="token number">5</span>, <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <p>如何从列表中取出特定位置的数据呢？<br>我们可以使用：下标索引<br><img src="https://cdn.jsdelivr.net/gh/panpan987/CDN@master/img/Snipaste_2023-06-09_20-30-12.png"><br>如图：列表中的每一个元素，都有其位置下标索引，从前向后的方向，从0开始，依次递增，我们只需要按照下标索引，即可取得对应位置的元素。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">list3 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Python'</span><span class="token punctuation">,</span><span class="token string">'Java'</span><span class="token punctuation">,</span><span class="token string">'C++'</span><span class="token punctuation">]</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>list3<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
@@ -491,7 +495,180 @@ C++<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>list4<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token number">5</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h3 id="列表的常用操作（方法）"><a href="#列表的常用操作（方法）" class="headerlink" title="列表的常用操作（方法）"></a>列表的常用操作（方法）</h3>
+<h4 id="列表的常用操作（方法）"><a href="#列表的常用操作（方法）" class="headerlink" title="列表的常用操作（方法）"></a>列表的常用操作（方法）</h4><ol>
+<li>查找某元素的下标<br>功能：查找指定元素再列表的小标，如果找不到，报错ValueError.<br>语法：列表.index(元素)<pre class="line-numbers language-python" data-language="python"><code class="language-python">list4 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"小A"</span><span class="token punctuation">,</span><span class="token string">"大S"</span><span class="token punctuation">,</span><span class="token string">"迷你"</span><span class="token punctuation">]</span>
+<span class="token comment"># 1.查看元素下标：index</span>
+index <span class="token operator">=</span> list4<span class="token punctuation">.</span>index<span class="token punctuation">(</span><span class="token string">"大S"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"1.大S在列表中的下标索引是：</span><span class="token interpolation"><span class="token punctuation">&#123;</span>index<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token comment"># 2.在数组指定位置插入元素：insert</span>
+list4<span class="token punctuation">.</span>insert<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token string">"雷欧克"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"2.执行insert方法，新数组为</span><span class="token interpolation"><span class="token punctuation">&#123;</span>list4<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token comment"># 3.在数组末尾插入元素：append 方法</span>
+list4<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"田七"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"3.执行append方法，新数组为</span><span class="token interpolation"><span class="token punctuation">&#123;</span>list4<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token comment"># 4.在数组末尾追加新的数组：extend</span>
+list5 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">]</span>
+list4<span class="token punctuation">.</span>extend<span class="token punctuation">(</span>list5<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"4.列表在追加元素之后的结果是：</span><span class="token interpolation"><span class="token punctuation">&#123;</span>list4<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+
+<span class="token comment"># 5.删除指定下标索引的元素（2种方式）</span>
+newList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"小磊"</span><span class="token punctuation">,</span><span class="token string">"Java"</span><span class="token punctuation">,</span><span class="token string">"Python"</span><span class="token punctuation">,</span><span class="token string">"CSS"</span><span class="token punctuation">]</span>
+<span class="token comment"># 5.1 方式1：del 数组[下标]</span>
+<span class="token keyword">del</span> newList<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"5.1.使用del删除元素后为</span><span class="token interpolation"><span class="token punctuation">&#123;</span>newList<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token comment"># 5.2 方式2：列表.pop(下标)</span>
+newList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"小磊"</span><span class="token punctuation">,</span><span class="token string">"Java"</span><span class="token punctuation">,</span><span class="token string">"Python"</span><span class="token punctuation">,</span><span class="token string">"CSS"</span><span class="token punctuation">]</span>
+element <span class="token operator">=</span> newList<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"5.2.使用pop删除</span><span class="token interpolation"><span class="token punctuation">&#123;</span>element<span class="token punctuation">&#125;</span></span><span class="token string">后新数组为</span><span class="token interpolation"><span class="token punctuation">&#123;</span>newList<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token comment"># 6.删除某元素在列表中的第一个匹配项：列表.remove(元素)</span>
+newList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"小磊"</span><span class="token punctuation">,</span><span class="token string">"Java"</span><span class="token punctuation">,</span><span class="token string">"Python"</span><span class="token punctuation">,</span><span class="token string">"Java"</span><span class="token punctuation">,</span><span class="token string">"CSS"</span><span class="token punctuation">]</span>
+newList<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token string">"Java"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"6.通过remove移除元素后结果为</span><span class="token interpolation"><span class="token punctuation">&#123;</span>newList<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token comment"># 7.清空整个列表：clear</span>
+newList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"小磊"</span><span class="token punctuation">,</span><span class="token string">"Java"</span><span class="token punctuation">,</span><span class="token string">"Python"</span><span class="token punctuation">,</span><span class="token string">"CSS"</span><span class="token punctuation">]</span>
+newList<span class="token punctuation">.</span>clear<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"7.清空后的列表为</span><span class="token interpolation"><span class="token punctuation">&#123;</span>newList<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token comment"># 8.统计某列表内某元素的数量:count</span>
+newList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"Java"</span><span class="token punctuation">,</span><span class="token string">"Java"</span><span class="token punctuation">,</span><span class="token string">"Python"</span><span class="token punctuation">,</span><span class="token string">"Java"</span><span class="token punctuation">,</span><span class="token string">"Python"</span><span class="token punctuation">]</span>
+count <span class="token operator">=</span> newList<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token string">"Java"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"8.列表中Java的数量为</span><span class="token interpolation"><span class="token punctuation">&#123;</span>count<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token comment"># 9.统计列表中总共有多少个元素:len(数组名)</span>
+newList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"Java"</span><span class="token punctuation">,</span><span class="token string">"Java"</span><span class="token punctuation">,</span><span class="token string">"Python"</span><span class="token punctuation">,</span><span class="token string">"Java"</span><span class="token punctuation">,</span><span class="token string">"Python"</span><span class="token punctuation">]</span>
+count <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>newList<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"9.列表的元素数量总共有</span><span class="token interpolation"><span class="token punctuation">&#123;</span>count<span class="token punctuation">&#125;</span></span><span class="token string">个"</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token number">1</span>.大S在列表中的下标索引是：1
+<span class="token number">2</span>.执行insert方法，新数组为<span class="token punctuation">[</span><span class="token string">'小A'</span>, <span class="token string">'雷欧克'</span>, <span class="token string">'大S'</span>, <span class="token string">'迷你'</span><span class="token punctuation">]</span>
+<span class="token number">3</span>.执行append方法，新数组为<span class="token punctuation">[</span><span class="token string">'小A'</span>, <span class="token string">'雷欧克'</span>, <span class="token string">'大S'</span>, <span class="token string">'迷你'</span>, <span class="token string">'田七'</span><span class="token punctuation">]</span>
+<span class="token number">4</span>.列表在追加元素之后的结果是：<span class="token punctuation">[</span><span class="token string">'小A'</span>, <span class="token string">'雷欧克'</span>, <span class="token string">'大S'</span>, <span class="token string">'迷你'</span>, <span class="token string">'田七'</span>, <span class="token number">1</span>, <span class="token number">2</span>, <span class="token number">3</span><span class="token punctuation">]</span>
+<span class="token number">5.1</span>.使用del删除元素后为<span class="token punctuation">[</span><span class="token string">'小磊'</span>, <span class="token string">'Java'</span>, <span class="token string">'Python'</span><span class="token punctuation">]</span>
+<span class="token number">5.2</span>.使用pop删除小磊后新数组为<span class="token punctuation">[</span><span class="token string">'Java'</span>, <span class="token string">'Python'</span>, <span class="token string">'CSS'</span><span class="token punctuation">]</span>
+<span class="token number">6</span>.通过remove移除元素后结果为<span class="token punctuation">[</span><span class="token string">'小磊'</span>, <span class="token string">'Python'</span>, <span class="token string">'Java'</span>, <span class="token string">'CSS'</span><span class="token punctuation">]</span>
+<span class="token number">7</span>.清空后的列表为<span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token number">8</span>.列表中Java的数量为3
+<span class="token number">9</span>.列表的元素数量总共有5个<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+学习编程，大多数方法是记忆不下来的，一般不需要刻意去记忆。我们要做的是，有一个模糊的印象，知晓有这样的用法即可。需要的时候，随时查阅资料即可。</li>
+</ol>
+<p>经过上述的列表的学习，我们可以总结出列表有如下特点：  </p>
+<ol>
+<li>可以容纳多个元素（上限为2**63-1、9223372036854775807个）</li>
+<li>可以容纳不同类型的元素</li>
+<li>数据是有序存储的（有下标序号）</li>
+<li>允许重复元素存在</li>
+<li>可以修改（增加或删除元素等）</li>
+</ol>
+<p>练习：<br><img src="https://cdn.jsdelivr.net/gh/panpan987/CDN@master/img/Snipaste_2023-07-29_21-00-01.png">  </p>
+<h4 id="列表的循环遍历"><a href="#列表的循环遍历" class="headerlink" title="列表的循环遍历"></a>列表的循环遍历</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token triple-quoted-string string">"""
+演示对list列表的循环，使用while和for循环2种方式
+"""</span>
+
+<span class="token keyword">def</span> <span class="token function">list_while_func</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    newList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"草稚京"</span><span class="token punctuation">,</span><span class="token string">"雅典娜"</span><span class="token punctuation">,</span><span class="token string">"菲欧娜"</span><span class="token punctuation">]</span>
+    index <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">while</span> index <span class="token operator">&lt;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>newList<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        element <span class="token operator">=</span> newList<span class="token punctuation">[</span>index<span class="token punctuation">]</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"列表的元素：</span><span class="token interpolation"><span class="token punctuation">&#123;</span>element<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+        index <span class="token operator">=</span> index <span class="token operator">+</span> <span class="token number">1</span>
+
+
+<span class="token keyword">def</span> <span class="token function">list_for_func</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    newList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"早川秋"</span><span class="token punctuation">,</span><span class="token string">"欧阳修"</span><span class="token punctuation">,</span><span class="token string">"电次"</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> element <span class="token keyword">in</span> newList<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"列表的元素有：</span><span class="token interpolation"><span class="token punctuation">&#123;</span>element<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+
+
+list_while_func<span class="token punctuation">(</span><span class="token punctuation">)</span>
+list_for_func<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">列表的元素：草稚京
+列表的元素：雅典娜
+列表的元素：菲欧娜
+列表的元素有：早川秋
+列表的元素有：欧阳修
+列表的元素有：电次<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>练习：<br><img src="https://cdn.jsdelivr.net/gh/panpan987/CDN@master/img/Snipaste_2023-07-29_21-26-17.png">  </p>
+<h3 id="二、元组"><a href="#二、元组" class="headerlink" title="二、元组"></a>二、元组</h3><p>列表是可以修改的。如果想要传递的信息，不被修改，列表就不合适了。<br>元组同列表一样，都是可以封装多个、不同类型的元素在内。但最大的不同点在于：元组一旦定义完成，就不可以修改。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 定义元组</span>
+t1 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token string">"hello"</span><span class="token punctuation">,</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+t2 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span>
+t3 <span class="token operator">=</span> <span class="token builtin">tuple</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"t1的类型是：</span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token builtin">type</span><span class="token punctuation">(</span>t1<span class="token punctuation">)</span><span class="token punctuation">&#125;</span></span><span class="token string">，内容是：</span><span class="token interpolation"><span class="token punctuation">&#123;</span>t1<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"t2的类型是：</span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token builtin">type</span><span class="token punctuation">(</span>t2<span class="token punctuation">)</span><span class="token punctuation">&#125;</span></span><span class="token string">，内容是：</span><span class="token interpolation"><span class="token punctuation">&#123;</span>t2<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"t3的类型是：</span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token builtin">type</span><span class="token punctuation">(</span>t3<span class="token punctuation">)</span><span class="token punctuation">&#125;</span></span><span class="token string">，内容是：</span><span class="token interpolation"><span class="token punctuation">&#123;</span>t3<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+
+<span class="token comment"># 定义单个元素的元组,注意后面加个逗号，否则是str类型</span>
+t4 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">"hello"</span><span class="token punctuation">,</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"t4的类型是：</span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token builtin">type</span><span class="token punctuation">(</span>t4<span class="token punctuation">)</span><span class="token punctuation">&#125;</span></span><span class="token string">，内容是：</span><span class="token interpolation"><span class="token punctuation">&#123;</span>t4<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token comment"># 元组也可以嵌套的</span>
+
+<span class="token comment"># 元组可以通过下标索引定位具体元素</span>
+
+<span class="token comment"># 元组内如果有list，list内的内容是可以修改的</span>
+t9 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token string">"AA"</span><span class="token punctuation">,</span><span class="token string">"BB"</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"t9的内容是：</span><span class="token interpolation"><span class="token punctuation">&#123;</span>t9<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+t9<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"蔡文姬"</span>
+t9<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"马可波罗"</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"t9的内容是：</span><span class="token interpolation"><span class="token punctuation">&#123;</span>t9<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">t1的类型是：<span class="token operator">&lt;</span>class <span class="token string">'tuple'</span><span class="token operator">></span>，内容是：<span class="token punctuation">(</span><span class="token number">1</span>, <span class="token string">'hello'</span>, True<span class="token punctuation">)</span>
+t2的类型是：<span class="token operator">&lt;</span>class <span class="token string">'tuple'</span><span class="token operator">></span>，内容是：<span class="token punctuation">(</span><span class="token punctuation">)</span>
+t3的类型是：<span class="token operator">&lt;</span>class <span class="token string">'tuple'</span><span class="token operator">></span>，内容是：<span class="token punctuation">(</span><span class="token punctuation">)</span>
+t4的类型是：<span class="token operator">&lt;</span>class <span class="token string">'tuple'</span><span class="token operator">></span>，内容是：<span class="token punctuation">(</span><span class="token string">'hello'</span>,<span class="token punctuation">)</span>
+t9的内容是：<span class="token punctuation">(</span><span class="token number">1</span>, <span class="token number">2</span>, <span class="token punctuation">[</span><span class="token string">'AA'</span>, <span class="token string">'BB'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+t9的内容是：<span class="token punctuation">(</span><span class="token number">1</span>, <span class="token number">2</span>, <span class="token punctuation">[</span><span class="token string">'蔡文姬'</span>, <span class="token string">'马可波罗'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+``<span class="token variable"><span class="token variable">`</span>  
+练习：
+<span class="token operator">!</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span>https://cdn.jsdelivr.net/gh/panpan987/CDN@master/img/Snipaste_2023-07-29_21-54-13.png<span class="token punctuation">)</span> 
+
+<span class="token comment">### 三、字符串</span>
+<span class="token variable">`</span></span>``python
+<span class="token comment"># 1.字符串下标索引</span>
+newStr <span class="token operator">=</span> <span class="token string">"Devil May Cry"</span>
+value1 <span class="token operator">=</span> newStr<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span>
+value2 <span class="token operator">=</span> newStr<span class="token punctuation">[</span>-11<span class="token punctuation">]</span>
+print<span class="token punctuation">(</span>f<span class="token string">"1.从字符串&#123;newStr&#125;取下标为2的元素值为&#123;value1&#125;，下标-16的元素值为&#123;value2&#125;"</span><span class="token punctuation">)</span>
+<span class="token comment"># 同元组一样，字符串是一个：无法修改的数据容器</span>
+
+<span class="token comment"># 2.index方法</span>
+value <span class="token operator">=</span> newStr.index<span class="token punctuation">(</span><span class="token string">"May"</span><span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>f<span class="token string">"2.在字符串&#123;newStr&#125;中查找May,其起始下标是：&#123;value&#125;"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 3.replace方法，将字符串里内容进行替换，得到一个新字符串</span>
+newNewStr <span class="token operator">=</span> newStr.replace<span class="token punctuation">(</span><span class="token string">"May"</span>, <span class="token string">"Must"</span><span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>f<span class="token string">"3.将字符串&#123;newStr&#125;替换后得到&#123;newNewStr&#125;"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 4.split 字符串的分割，将字符串划分多个字符串，并存入列表对象中</span>
+newList <span class="token operator">=</span> newStr.split<span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>f<span class="token string">"4.将字符串&#123;newStr&#125;进行切割后得到&#123;newList&#125;"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 5.strip() 可以去除字符串前后空格</span>
+newStr1 <span class="token operator">=</span> <span class="token string">"    Devil May Cry     "</span>
+newNewStr1 <span class="token operator">=</span> newStr1.strip<span class="token punctuation">(</span><span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>f<span class="token string">"5.1.字符串&#123;newStr1&#125;进行split切分后得到&#123;newNewStr1&#125;"</span><span class="token punctuation">)</span>
+
+newStr2 <span class="token operator">=</span> <span class="token string">"123Devil May Cry321"</span>
+newNewStr2 <span class="token operator">=</span> newStr2.strip<span class="token punctuation">(</span><span class="token string">"123"</span><span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>f<span class="token string">"5.2.字符串&#123;newStr2&#125;进行split切分后得到&#123;newNewStr2&#125;"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 6.统计字符串中某个字符出现的次数</span>
+newStr <span class="token operator">=</span> <span class="token string">"Devil May Cry"</span>
+count <span class="token operator">=</span> newStr.count<span class="token punctuation">(</span><span class="token string">"y"</span><span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>f<span class="token string">"6.字母y在&#123;newStr&#125;里出现了&#123;count&#125;次"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 7.统计字符串的长度</span>
+newStr <span class="token operator">=</span> <span class="token string">"Devil May Cry"</span>
+<span class="token builtin class-name">cd</span> <span class="token operator">=</span> len<span class="token punctuation">(</span>newStr<span class="token punctuation">)</span>
+print<span class="token punctuation">(</span>f<span class="token string">"7.字符串&#123;newStr&#125;的长度为&#123;cd&#125;"</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token number">1</span>.从字符串Devil May Cry取下标为2的元素值为v，下标-16的元素值为v
+<span class="token number">2</span>.在字符串Devil May Cry中查找May,其起始下标是：6
+<span class="token number">3</span>.将字符串Devil May Cry替换后得到Devil Must Cry
+<span class="token number">4</span>.将字符串Devil May Cry进行切割后得到<span class="token punctuation">[</span><span class="token string">'Devil'</span>, <span class="token string">'May'</span>, <span class="token string">'Cry'</span><span class="token punctuation">]</span>
+<span class="token number">5.1</span>.字符串    Devil May Cry     进行split切分后得到Devil May Cry
+<span class="token number">5.2</span>.字符串123Devil May Cry321进行split切分后得到Devil May Cry
+<span class="token number">6</span>.字母y在Devil May Cry里出现了2次
+<span class="token number">7</span>.字符串Devil May Cry加的长度为14<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="三-5序列"><a href="#三-5序列" class="headerlink" title="三-5序列"></a>三-5序列</h3><p>序列是指：内容连续、有序，可使用下标索引的一类数据容器。<br>列表、元组、字符串，均可以视为序列。<br><img src="https://cdn.jsdelivr.net/gh/panpan987/CDN@master/img/Snipaste_2023-07-29_22-39-08.png"><br>序列的常用操作：切片，即从一个序列中，取出一个子序列。</p>
+<h3 id="四、集合"><a href="#四、集合" class="headerlink" title="四、集合"></a>四、集合</h3><h3 id="五、字典"><a href="#五、字典" class="headerlink" title="五、字典"></a>五、字典</h3>
                 
             </div>
             <hr/>
