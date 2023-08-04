@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-07-03T11:49:01.421Z</updated>
+  <updated>2023-08-02T13:56:58.501Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,86 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VAM</title>
+    <link href="http://example.com/2023/09/02/vam-software/"/>
+    <id>http://example.com/2023/09/02/vam-software/</id>
+    <published>2023-09-02T13:49:00.000Z</published>
+    <updated>2023-08-02T13:56:58.501Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;VAM可以制作3D视频&lt;/p&gt;
+&lt;h2 id=&quot;TODO&quot;&gt;&lt;a href=&quot;#TODO&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="VAM" scheme="http://example.com/categories/VAM/"/>
+    
+    
+    <category term="VAM" scheme="http://example.com/tags/VAM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python10</title>
+    <link href="http://example.com/2023/08/04/python10/"/>
+    <id>http://example.com/2023/08/04/python10/</id>
+    <published>2023-08-04T13:48:00.000Z</published>
+    <updated>2023-08-04T14:05:40.966Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;文件&quot;&gt;&lt;a href=&quot;#文件&quot; class=&quot;headerlink&quot; title=&quot;文件&quot;&gt;&lt;/a&gt;文件&lt;/h2&gt;&lt;h3 id=&quot;文件编码&quot;&gt;&lt;a href=&quot;#文件编码&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="http://example.com/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="基础" scheme="http://example.com/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python09</title>
+    <link href="http://example.com/2023/08/04/python09/"/>
+    <id>http://example.com/2023/08/04/python09/</id>
+    <published>2023-08-04T12:44:00.000Z</published>
+    <updated>2023-08-04T13:46:57.338Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;函数补充&quot;&gt;&lt;a href=&quot;#函数补充&quot; class=&quot;headerlink&quot; title=&quot;函数补充&quot;&gt;&lt;/a&gt;函数补充&lt;/h2&gt;&lt;h3 id=&quot;函数的多返回值&quot;&gt;&lt;a href=&quot;#函数的多返回值&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="http://example.com/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="基础" scheme="http://example.com/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue01</title>
