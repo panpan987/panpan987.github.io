@@ -436,23 +436,18 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    6 分
                 </div>
                 
 
                 
-                    <div id="busuanzi_container_page_pv" class="info-break-policy">
-                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
-                        <span id="busuanzi_value_page_pv"></span>
-                    </div>
-				
             </div>
         </div>
         <hr class="clearfix">
@@ -469,6 +464,155 @@
                 <h2 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h2><h3 id="文件编码"><a href="#文件编码" class="headerlink" title="文件编码"></a>文件编码</h3><p><img src="https://cdn.jsdelivr.net/gh/panpan987/CDN@master/img/Snipaste_2023-08-04_21-52-00.png"><br><img src="https://cdn.jsdelivr.net/gh/panpan987/CDN@master/img/Snipaste_2023-08-04_21-54-16.png"><br><img src="https://cdn.jsdelivr.net/gh/panpan987/CDN@master/img/Snipaste_2023-08-04_21-58-00.png"></p>
 <h3 id="什么是文件"><a href="#什么是文件" class="headerlink" title="什么是文件"></a>什么是文件</h3><p><img src="https://cdn.jsdelivr.net/gh/panpan987/CDN@master/img/Snipaste_2023-08-04_21-59-55.png"></p>
 <p>在日常生活中，文件操作主要包括打开、关闭、读、写等操作。<br>在Python中，主要就是<code>打开，读写，关闭</code>的文件操作。</p>
+<ol>
+<li>open()打开函数<br><img src="https://cdn.jsdelivr.net/gh/panpan987/CDN@master/img/Snipaste_2023-08-10_23-35-26.png"><br><img src="https://cdn.jsdelivr.net/gh/panpan987/CDN@master/img/Snipaste_2023-08-10_23-37-56.png"></li>
+</ol>
+<p>F盘根目录下有个 测试.txt文件,内容为:</p>
+<pre class="line-numbers language-txt" data-language="txt"><code class="language-txt">1.我长话短说，但是说来话长。
+2.俗话说的好:俗话说的好。
+3.你花了多少分钟看这些文字，就浪费了多少分钟。
+4.记是记得住，就是想不起来了。
+5.如果你能看见东西的话说明你不瞎。
+6.现在醒着的人应该都还没睡吧。
+7.我上次这么无语的时候还是在上次。
+8.有关你的发言，抛开内容不谈，我还是非常赞同的。
+9.千里江陵一日还，五百里江陵半日还。
+10.十年生死两茫茫，五年生死一茫茫。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="2">
+<li>读操作<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 打开文件</span>
+<span class="token comment"># 说明:前两位参数位置指定的,因为第三位参数不是encoding,所以把参数名写出来</span>
+f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"F:/测试.txt"</span><span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 常用方法</span>
+<span class="token comment"># read()方法: 文件对象.read(num)  num表示要从 文件中读取的数据的长度(单位是字符),如果没有传入num,那么就表示读取文件中所有的数据</span>
+<span class="token comment"># win10记事本默认在正文前有一个空白字符,所以以下参数10显示9个字符</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"读取10字符的结果: </span><span class="token interpolation"><span class="token punctuation">&#123;</span>f<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"读取全部内容的结果: </span><span class="token interpolation"><span class="token punctuation">&#123;</span>f<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">读取10字符的结果: ﻿<span class="token number">1</span>.我长话短说，但
+读取全部内容的结果: 是说来话长。
+<span class="token number">2</span>.俗话说的好:俗话说的好。
+<span class="token number">3</span>.你花了多少分钟看这些文字，就浪费了多少分钟。
+<span class="token number">4</span>.记是记得住，就是想不起来了。
+<span class="token number">5</span>.如果你能看见东西的话说明你不瞎。
+<span class="token number">6</span>.现在醒着的人应该都还没睡吧。
+<span class="token number">7</span>.我上次这么无语的时候还是在上次。
+<span class="token number">8</span>.有关你的发言，抛开内容不谈，我还是非常赞同的。
+<span class="token number">9</span>.千里江陵一日还，五百里江陵半日还。
+<span class="token number">10</span>.十年生死两茫茫，五年生死一茫茫。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"F:/测试.txt"</span><span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span>
+<span class="token comment"># readlines()方法: 可以按行读取整个文件中的内容,并且返回的是一个列表,其中每一行的数据为一个元素.</span>
+lines <span class="token operator">=</span> f<span class="token punctuation">.</span>readlines<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"lines对象的类型: </span><span class="token interpolation"><span class="token punctuation">&#123;</span><span class="token builtin">type</span><span class="token punctuation">(</span>lines<span class="token punctuation">)</span><span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"lines对象的内容是: </span><span class="token interpolation"><span class="token punctuation">&#123;</span>lines<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">lines对象的类型: <span class="token operator">&lt;</span>class <span class="token string">'list'</span><span class="token operator">></span>
+lines对象的内容是: <span class="token punctuation">[</span><span class="token string">'\ufeff1.我长话短说，但是说来话长。\n'</span>, <span class="token string">'2.俗话说的好:俗话说的好。\n'</span>, <span class="token string">'3.你花了多少分钟看这些文字，就浪费了多少分钟。\n'</span>, <span class="token string">'4.记是记得住，就是想不起来了。\n'</span>, <span class="token string">'5.如果你能看见东西的话说明你不瞎。\n'</span>, <span class="token string">'6.现在醒着的人应该都还没睡吧。\n'</span>, <span class="token string">'7.我上次这么无语的时候还是在上次。\n'</span>, <span class="token string">'8.有关你的发言，抛开内容不谈，我还是非常赞同的。\n'</span>, <span class="token string">'9.千里江陵一日还，五百里江陵半日还。\n'</span>, <span class="token string">'10.十年生死两茫茫，五年生死一茫茫。'</span><span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"F:/测试.txt"</span><span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span>
+<span class="token comment"># readline()方法,一次读取一行</span>
+line1 <span class="token operator">=</span> f<span class="token punctuation">.</span>readline<span class="token punctuation">(</span><span class="token punctuation">)</span>
+line2 <span class="token operator">=</span> f<span class="token punctuation">.</span>readline<span class="token punctuation">(</span><span class="token punctuation">)</span>
+line3 <span class="token operator">=</span> f<span class="token punctuation">.</span>readline<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"第一行数据是: </span><span class="token interpolation"><span class="token punctuation">&#123;</span>line1<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"第二行数据是: </span><span class="token interpolation"><span class="token punctuation">&#123;</span>line2<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"第三行数据是: </span><span class="token interpolation"><span class="token punctuation">&#123;</span>line3<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">第一行数据是: ﻿<span class="token number">1</span>.我长话短说，但是说来话长。
+
+第二行数据是: <span class="token number">2</span>.俗话说的好:俗话说的好。
+
+第三行数据是: <span class="token number">3</span>.你花了多少分钟看这些文字，就浪费了多少分钟。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"F:/测试.txt"</span><span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span>
+<span class="token comment"># for循环读取文件行</span>
+<span class="token keyword">for</span> line <span class="token keyword">in</span> f<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"每一行数据是: </span><span class="token interpolation"><span class="token punctuation">&#123;</span>line<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">每一行数据是: ﻿<span class="token number">1</span>.我长话短说，但是说来话长。
+
+每一行数据是: <span class="token number">2</span>.俗话说的好:俗话说的好。
+
+每一行数据是: <span class="token number">3</span>.你花了多少分钟看这些文字，就浪费了多少分钟。
+
+每一行数据是: <span class="token number">4</span>.记是记得住，就是想不起来了。
+
+每一行数据是: <span class="token number">5</span>.如果你能看见东西的话说明你不瞎。
+
+每一行数据是: <span class="token number">6</span>.现在醒着的人应该都还没睡吧。
+
+每一行数据是: <span class="token number">7</span>.我上次这么无语的时候还是在上次。
+
+每一行数据是: <span class="token number">8</span>.有关你的发言，抛开内容不谈，我还是非常赞同的。
+
+每一行数据是: <span class="token number">9</span>.千里江陵一日还，五百里江陵半日还。
+
+每一行数据是: <span class="token number">10</span>.十年生死两茫茫，五年生死一茫茫。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 文件的关闭</span>
+f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># with open 语法操作文件, 操作语句执行完文件会自动close</span>
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"F:/测试.txt"</span><span class="token punctuation">,</span> <span class="token string">"r"</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    <span class="token keyword">for</span> line <span class="token keyword">in</span> f<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"每一行数据是: </span><span class="token interpolation"><span class="token punctuation">&#123;</span>line<span class="token punctuation">&#125;</span></span><span class="token string">"</span></span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>统计文件中单词个数案例:</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 打开文件,以读取模式打开</span>
+f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"F:/word.txt"</span><span class="token punctuation">,</span><span class="token string">"r"</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span>
+<span class="token comment"># 方式1:读取全部内容,通过字符串count方法统计单词数量</span>
+<span class="token comment"># content = f.read()</span>
+<span class="token comment"># count = content.count("需要统计的单词")</span>
+<span class="token comment"># print(f"单词出现了&#123;count&#125;次")</span>
+<span class="token comment"># 方式2:读取内容,一行一行读取</span>
+count <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">for</span> line <span class="token keyword">in</span> f<span class="token punctuation">:</span>
+    line <span class="token operator">=</span> line<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># 去除开头和结尾的空格和换行符</span>
+    words <span class="token operator">=</span> line<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> word <span class="token keyword">in</span> words<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> word <span class="token operator">==</span> <span class="token string">"需要统计的单词"</span><span class="token punctuation">:</span>
+            count <span class="token operator">+=</span> <span class="token number">1</span>
+<span class="token comment"># 判断单词出现次数并累计</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f"单词总共出现了</span><span class="token interpolation"><span class="token punctuation">&#123;</span>count<span class="token punctuation">&#125;</span></span><span class="token string">次"</span></span><span class="token punctuation">)</span>
+<span class="token comment"># 关闭文件</span>
+f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="3">
+<li>写操作</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/panpan987/CDN@master/img/Snipaste_2023-08-11_18-47-30.png"></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 打开文件,不存在的文件, r,w,a</span>
+<span class="token comment"># 文件不存在,w模式会创建文件</span>
+<span class="token keyword">import</span> time
+
+f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"F:/test.txt"</span><span class="token punctuation">,</span><span class="token string">"w"</span><span class="token punctuation">,</span>encoding<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span>
+<span class="token comment"># write写入</span>
+f<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">"Hello World!"</span><span class="token punctuation">)</span> <span class="token comment"># 内容写入到内存中</span>
+
+<span class="token comment"># flush刷新</span>
+f<span class="token punctuation">.</span>flush<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># close关闭</span>
+f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>   <span class="token comment"># close方法,自带flush的功能</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 打开一个存在的文件</span>
+<span class="token comment"># 文件已经存在,内容会被清空,重新写</span>
+f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"F:/test.txt"</span><span class="token punctuation">,</span><span class="token string">"w"</span><span class="token punctuation">,</span>encoding<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span>
+<span class="token comment"># write写入.flush刷新</span>
+f<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">"哈哈哈!!!"</span><span class="token punctuation">)</span>
+<span class="token comment"># close关闭</span>
+f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ol start="4">
+<li>追加操作<br><img src="https://cdn.jsdelivr.net/gh/panpan987/CDN@master/img/Snipaste_2023-08-11_18-57-47.png"></li>
+</ol>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 打开文件,不存在的文件, r,w,a</span>
+<span class="token comment"># f = open("F:/test.txt","a",encoding="UTF-8")</span>
+<span class="token comment"># write写入</span>
+<span class="token comment"># f.write("QWERT")</span>
+<span class="token comment"># f.close()</span>
+<span class="token comment"># 打开一个存在的文件</span>
+f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"F:/test.txt"</span><span class="token punctuation">,</span><span class="token string">"a"</span><span class="token punctuation">,</span>encoding<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span>
+f<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">"YUIOP"</span><span class="token punctuation">)</span>
+f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>先运行上面代码,再注释掉,运行下面的,会在文件中写 QWERTYUIOP</p>
 
                 
             </div>
@@ -608,12 +752,12 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2023/09/02/vam-software/">
+                <a href="/2023/08/11/python11/">
                     <div class="card-image">
                         
-                        <img src="https://cdn.jsdelivr.net/gh/panpan987/CDN@master/cover_img/003501-16782933018340.jpg" class="responsive-img" alt="VAM">
+                        <img src="https://cdn.jsdelivr.net/gh/panpan987/CDN@master/cover_img/small111612oRbt01689390972.jpg" class="responsive-img" alt="Python11">
                         
-                        <span class="card-title">VAM</span>
+                        <span class="card-title">Python11</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -624,14 +768,14 @@
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-09-02
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-08-11
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/VAM/" class="post-category">
-                                    VAM
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
                                 </a>
                             
                             
@@ -641,8 +785,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/VAM/">
-                        <span class="chip bg-color">VAM</span>
+                    <a href="/tags/Python/">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">基础</span>
                     </a>
                     
                 </div>
@@ -977,10 +1125,6 @@
 
 
 
-
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=546898516" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 546898516" data-position="top" data-delay="50">
-        <i class="fab fa-qq"></i>
-    </a>
 
 
 
